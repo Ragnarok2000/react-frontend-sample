@@ -1,16 +1,39 @@
-# React + Vite
+# Java Full Stack Sample – Item Management API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+This is a simple Java Spring Boot backend application that implements a RESTful API for managing a collection of items.  
+It was created as part of a sample task for a Freelance Java Developer opportunity.
 
-Currently, two official plugins are available:
+The project also includes a React frontend deployed on Vercel that interacts with the backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ⚙️ Features
+- **Item Model**: Represents an item with fields like `id`, `name`, and `description`.
+- **In-Memory Data Store**: Uses `ArrayList` to store items.
+- **RESTful Endpoints**:
+  - `POST /items` → Add a new item
+  - `GET /items/{id}` → Get a single item by ID
+- **Input Validation**: Ensures required fields are present when adding items.
+- **CORS Config**: Allows requests from localhost (for dev) and deployed frontend on Vercel.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Deployment Links
+- **Frontend (React, Vercel):**  
+  👉 [https://react-frontend-sample.vercel.app](https://react-frontend-sample.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Backend (Spring Boot, Render):**  
+  👉 [https://java-backend-sample.onrender.com](https://java-backend-sample.onrender.com)
+
+⚠️ **Note:** The backend is hosted on a free Render instance.  
+The server goes to sleep when idle, so the **first request may take up to 1 minute** while it restarts.  
+If you don’t get a response immediately, please try again after a minute.
+
+---
+
+## 📖 How to Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Ragnarok2000/java-backend-sample.git
+   cd java-backend-sample
